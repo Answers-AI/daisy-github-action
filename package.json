@@ -2,16 +2,14 @@
   "name": "@answerai/daisy-github-action",
   "version": "0.1.0",
   "description": "D.A.I.S.Y. - Document Automation and Intelligent System. A helpful bot that documents your code for you. It allows you to save it into memory and chat with it using AnswerAI",
-  "main": "index.js",
+  "main": "lib/index.js",
   "private": true,
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
+    "package": "ncc build --source-map --license licenses.txt",
     "test": "jest",
     "test:watch": "jest --watch"
-  },
-  "bin": {
-    "daisy": "./index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +23,7 @@
   "homepage": "https://github.com/Answers-AI/daisy#readme",
   "devDependencies": {
     "@types/node": "^20.4.2",
+    "@vercel/ncc": "^0.36.1",
     "dotenv": "^16.0.3",
     "typescript": "^5.1.6"
   },
